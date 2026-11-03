@@ -89,7 +89,7 @@ Route::post('/pasien-hewan', function (Request $request) {
         'nama_hewan' => strip_tags(trim((string) $request->input('nama_hewan'))),
         'nomor_rekam' => strip_tags(trim((string) $request->input('nomor_rekam'))),
     ]);
-
+//validasi
     $data = $request->validate([
         'kode_pasien' => ['required', 'alpha_num:ascii', 'size:10'],
         'nama_hewan' => ['required', 'string', 'min:2', 'max:100'],
