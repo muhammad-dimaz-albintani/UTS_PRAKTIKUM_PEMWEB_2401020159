@@ -314,7 +314,7 @@ Route::put('/pasien-hewan/{id}', function (Request $request, int $id) {
         );
     }
 })->whereNumber('id')->name('pasien-hewan.update');
-
+//delete
 Route::delete('/pasien-hewan/{id}', function (int $id) {
     try {
         $pdo = DB::connection()->getPdo();
